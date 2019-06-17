@@ -16,7 +16,7 @@ log.info "\n"
 
 annotation = Channel.fromPath("/home/libr8211/workshop/annotation/*")
 genome = Channel.fromPath("/home/libr8211/workshop/genome/*")
-sample_info_for_de = Channel.fromPath("/home/libr8211/workshop/sample_info/*")
+sample_info = Channel.fromPath("/home/libr8211/workshop/sample_info/*")
 index = Channel.fromPath("/home/libr8211/workshop/index")
 reads = Channel.fromFilePairs(params.reads, size: -1)
   .ifEmpty { error "Can't find any reads matching: ${params.reads}" }
